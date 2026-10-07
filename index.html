@@ -1,1 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ujwala — 3rd Semester B.Tech CSE Portfolio">
+<title>Ujwala | CSE Portfolio</title>
 
+<style>
+:root{
+  --bg:#07111f;
+  --card:#0d1b2e;
+  --text:#eef6ff;
+  --muted:#a8b8ca;
+  --line:#203650;
+  --a:#69d2ff;
+  --b:#9b7bff;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%,#132d4b 0,transparent 32%),
+    radial-gradient(circle at 85% 20%,#24184a 0,transparent 30%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.wrap{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:5;
+  background:#07111fe8;
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+
+.navin{
+  height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-weight:800;
+  font-size:1.2rem;
+}
+
+.logo span{
+  color:var(--a);
+}
+
+nav{
+  display:flex;
+  gap:20px;
+  color:var(--muted);
+  font-size:.92rem;
+}
+
+nav a:hover{
+  color:white;
+}
+
+/* HERO */
+.hero{
+  min-height:76vh;
+  display:grid;
+  place-items:center;
+  padding:80px 0;
+}
+
+.hero h1{
+  font-size:clamp(3rem,8vw,6.5rem);
+  line-height:.95;
+  margin:0 0 22px;
+  letter-spacing:-.06em;
+}
+
+.grad{
+  background:linear-gradient(90deg,var(--a),#fff,var(--b));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.eyebrow{
+  color:var(--a);
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.hero p{
+  max-width:720px;
+  color:var(--muted);
+  font-size:1.12rem;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn{
+  padding:12px 18px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#10233b;
+  font-weight:700;
+}
+
+.btn.primary{
+  background:linear-gradient(100deg,#4fc9f5,#8c6dff);
+  color:#06101d;
+  border:0;
+}
+
+/* SECTIONS */
+.section{
+  padding:80px 0;
+}
+
+.title{
+  font-size:2.1rem;
+  margin:0 0 10px;
+}
+
+.sub{
+  color:var(--muted);
+  margin:0 0 30px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.card{
+  background:#0c1a2bdd;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:24px;
+  box-shadow:0 16px 45px #0003;
+}
+
+.card h3{
+  margin-top:0;
+}
+
+.muted{
+  color:var(--muted);
+}
+
+/* SKILLS */
+.tag{
+  display:inline-block;
+  padding:7px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  margin:5px;
+  color:#d9e8f7;
+  background:#0b1728;
+}
+
+/* JOURNEY */
+.timeline{
+  display:grid;
+  gap:14px;
+}
+
+.step{
+  display:grid;
+  grid-template-columns:90px 1fr;
+  gap:20px;
+  align-items:start;
+}
+
+.num{
+  color:var(--a);
+  font-weight:800;
+}
+
+.links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+
+.repo{
+  display:block;
+}
+
+.repo strong{
+  color:var(--a);
+}
+
+/* FOOTER */
+footer{
+  padding:35px 0;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+  nav{
+    display:none;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .step{
+    grid-template-columns:65px 1fr;
+  }
+
+  .hero{
+    min-height:68vh;
+    padding:50px 0;
+  }
+
+  .section{
+    padding:60px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="wrap navin">
+
+    <div class="logo">
+      Ujwala<span>.</span>
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#activities">Activities</a>
+      <a href="#skills">Skills</a>
+      <a href="#goal">Goal</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+
+    <div class="eyebrow">
+      3rd Semester · B.Tech Computer Science & Engineering
+    </div>
+
+    <h1>
+      Building, learning,<br>
+      <span class="grad">one commit at a time.</span>
+    </h1>
+
+    <p>
+      I’m Ujwala, a B.Tech CSE student building my technical foundation
+      through programming, problem solving, GitHub-based work,
+      collaboration and continuous learning.
+    </p>
+
+    <div class="buttons">
+
+      <a
+        class="btn primary"
+        href="https://github.com/ujwala28-creator"
+        target="_blank">
+        View GitHub
+      </a>
+
+      <a
+        class="btn"
+        href="https://github.com/ujwala28-creator/leetcode-solutions"
+        target="_blank">
+        LeetCode Solutions
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section">
+
+  <div class="wrap">
+
+    <h2 class="title">About Me</h2>
+
+    <p class="sub">
+      A growing developer focused on practical computer-science skills.
+    </p>
+
+    <div class="card">
+
+      <p>
+        I am a 3rd-semester B.Tech CSE student developing stronger
+        programming and problem-solving skills through hands-on activities.
+        My learning journey includes C programming, Java fundamentals,
+        Python practice, Git, GitHub, GitLens, Live Share and technical
+        documentation.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- LEARNING JOURNEY -->
+<section id="journey" class="section">
+
+  <div class="wrap">
+
+    <h2 class="title">Learning Journey</h2>
+
+    <p class="sub">
+      From a first program to consistent coding practice.
+    </p>
+
+    <div class="timeline">
+
+      <div class="card step">
+
+        <div class="num">
+          01 · C
+        </div>
+
+        <div>
+          <h3>Hello, World!</h3>
+
+          <p class="muted">
+            Created and executed a simple C Hello World program
+            using VS Code.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="card step">
+
+        <div class="num">
+          02 · Git
+        </div>
+
+        <div>
+          <h3>Git & GitHub</h3>
+
+          <p class="muted">
+            Practiced Git setup, created a public repository,
+            added source code and documentation.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="card step">
+
+        <div class="num">
+          03 · Team
+        </div>
+
+        <div>
+          <h3>GitLens & Live Share</h3>
+
+          <p class="muted">
+            Explored repository history and collaborative
+            development workflows.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="card step">
+
+        <div class="num">
+          04 · Code
+        </div>
+
+        <div>
+          <h3>Problem Solving</h3>
+
+          <p class="muted">
+            Continued coding practice through a dedicated
+            LeetCode solutions repository.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ACTIVITIES -->
+<section id="activities" class="section">
+
+  <div class="wrap">
+
+    <h2 class="title">
+      Activities & Projects
+    </h2>
+
+    <p class="sub">
+      Work represented in my portfolio journey.
+    </p>
+
+    <div class="grid">
+
+
+      <article class="card">
+
+        <h3>
+          Activity 1 — C Hello World
+        </h3>
+
+        <p class="muted">
+          A first practical C programming exercise developed
+          and run in VS Code.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <h3>
+          Activity 2 — Git & GitHub
+        </h3>
+
+        <p class="muted">
+          Repository creation, source-code management and
+          README documentation.
+        </p>
+
+        <a
+          class="repo"
+          href="https://github.com/ujwala28-creator"
+          target="_blank">
+
+          <strong>
+            GitHub profile →
+          </strong>
+
+        </a>
+
+      </article>
+
+
+      <article class="card">
+
+        <h3>
+          Activity 3 — GitLens & Live Share
+        </h3>
+
+        <p class="muted">
+          Repository inspection, commit-history exploration
+          and collaborative coding practice.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <h3>
+          Activity 4 — LeetCode Practice
+        </h3>
+
+        <p class="muted">
+          A repository for organizing and showcasing
+          coding-problem solutions.
+        </p>
+
+        <a
+          class="repo"
+          href="https://github.com/ujwala28-creator/leetcode-solutions"
+          target="_blank">
+
+          <strong>
+            Open solutions repository →
+          </strong>
+
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+
+  <div class="wrap">
+
+    <h2 class="title">
+      Skills
+    </h2>
+
+    <p class="sub">
+      Technologies and practices I am developing.
+    </p>
+
+    <div class="card">
+
+      <span class="tag">C Programming</span>
+      <span class="tag">Java Fundamentals</span>
+      <span class="tag">Python Practice</span>
+      <span class="tag">Problem Solving</span>
+      <span class="tag">Git</span>
+      <span class="tag">GitHub</span>
+      <span class="tag">GitLens</span>
+      <span class="tag">Live Share</span>
+      <span class="tag">Technical Documentation</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GOAL -->
+<section id="goal" class="section">
+
+  <div class="wrap">
+
+    <h2 class="title">
+      Learning Goal
+    </h2>
+
+    <div class="card">
+
+      <h3>
+        Become a stronger practical software developer
+      </h3>
+
+      <p class="muted">
+        My goal is to strengthen programming and problem-solving
+        skills, maintain a consistent GitHub portfolio, gain
+        practical project experience and build stronger
+        software-development and computer-science foundations.
+      </p>
+
+      <div class="links">
+
+        <a
+          class="btn primary"
+          href="https://github.com/ujwala28-creator"
+          target="_blank">
+          GitHub Profile
+        </a>
+
+        <a
+          class="btn"
+          href="https://github.com/ujwala28-creator/leetcode-solutions"
+          target="_blank">
+          LeetCode Repository
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+  © 2026 Ujwala · B.Tech CSE · Built as part of Portfolio Building Activity 12
+</footer>
+
+</body>
+</html>
